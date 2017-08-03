@@ -31,6 +31,28 @@ var LoginPage = Object.create(Page, {
         }
     },
 
+    //Methods
+    clickButtonLogin: {
+        get: function () {
+            this.buttonLogin.click();
+        }
+    },
+    getPageTitle: {
+        get: function () {
+            browser.getTitle();
+        }
+    },
+    getWrongCredentialsMessage: {
+        get: function () {
+            this.wrongCredentials_invalidCredentialsMessage.getText();
+        }
+    },
+    getInvalidCredentialsMessage: {
+        get: function () {
+            this.wrongCredentials_invalidCredentialsMessage.getText();
+        }
+    }
+
 });
 
 module.exports = LoginPage;
