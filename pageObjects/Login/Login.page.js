@@ -5,7 +5,7 @@ var LoginPage = Object.create(Page, {
     //Overwrite Page method
     open: {
         get :function() {
-            return Page.open('/admin/');
+            return Page.open('http://www.phptravels.net/admin');
         }
     },
 
