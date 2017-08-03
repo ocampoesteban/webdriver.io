@@ -1,17 +1,10 @@
-/**
- * Created by steve on 03/08/17.
- */
-var webdriverio = require('webdriverio');
-var options = {
-    desiredCapabilities: {
-        browserName: 'chrome'
-    }
-};
-webdriverio
-    .remote(options)
-    .init()
-    .url('http://www.phptravels.net/admin')
-    .getTitle().then(function(title) {
-    console.log('Title is: ' + title);
-})
-    .end();
+//Created by steve on 03/08/17.
+assert = require('assert');
+LoginPage = require('../../../pageObjects/Login/Login.page');
+
+describe('Login page\n', function () {
+    it('User is logged properly - Right user and password', function () {
+        LoginPage.open
+
+    });
+});
