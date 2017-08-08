@@ -1,3 +1,4 @@
+var report = require('./reporter/reporter');//Report declaration
 exports.config = {
     
     //
@@ -131,7 +132,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    // reporters: ['dot'],
+     reporters:[report],
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
