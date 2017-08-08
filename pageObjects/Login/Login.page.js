@@ -40,12 +40,13 @@ var LoginPage = Object.create(Page, {
     },
     getPageTitle: {
         get: function () {
-            browser.getTitle();
+            return browser.getTitle();
         }
     },
     getWrongCredentialsMessage: {
         get: function () {
-            this.wrongCredentials_invalidCredentialsMessage.getText();
+            browser.pause(2000);
+            return this.wrongCredentials_invalidCredentialsMessage.getText();
         }
     },
     getInvalidCredentialsMessage: {
