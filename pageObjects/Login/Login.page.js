@@ -51,7 +51,8 @@ var LoginPage = Object.create(Page, {
     },
     getInvalidCredentialsMessage: {
         get: function () {
-            this.wrongCredentials_invalidCredentialsMessage.getText();
+            browser.pause(2000);
+            return this.wrongCredentials_invalidCredentialsMessage.getText();
         }
     }
 
