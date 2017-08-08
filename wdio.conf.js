@@ -10,12 +10,25 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/LoggedNotProperly_InvalidEmail.spec.js'
+        './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
     ],
+    // ============
+    // Suites
+    // ============
+    suites: {
+        login: [
+            './test/specs/Login/LoggedProperly.spec.js',
+            './test/specs/Login/LoggedNotProperly_InvalidEmail.spec.js',
+            './test/specs/Login/LoggedNotProperly_WrongPassword.spec.js'
+        ],
+        otherFeature: [
+            // ...
+        ]
+    },
     //
     // ============
     // Capabilities
