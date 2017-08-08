@@ -5,7 +5,7 @@ var LoginPage = Object.create(Page, {
     //Overwrite Page method
     open: {
         get :function() {
-            return Page.open('http://www.phptravels.net/admin');
+            return Page.open('/admin/');
         }
     },
 
@@ -34,6 +34,7 @@ var LoginPage = Object.create(Page, {
     //Methods
     clickButtonLogin: {
         get: function () {
+            browser.pause(3000);
             this.buttonLogin.click();
         }
     },
