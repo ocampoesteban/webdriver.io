@@ -11,6 +11,7 @@ var DashboardPage = Object.create(Page, {
     },
     getPageTitle: {
         get: function () {
+            console.log("Getting Page Title");
             browser.pause(1000);
             return browser.getTitle();
         }
